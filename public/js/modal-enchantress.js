@@ -5,7 +5,7 @@
           document.body.style.overflow = 'hidden';
           document.querySelector('#openModalEnchantress').style.marginLeft = scrollbar;
         });
-        document.querySelector('[href="#close"]').addEventListener('click', function () {
+        document.querySelector('[href="#closeEnchantress"]').addEventListener('click', function () {
           document.body.style.overflow = 'visible';
           document.querySelector('#openModalEnchantress').style.marginLeft = '0px';
         });

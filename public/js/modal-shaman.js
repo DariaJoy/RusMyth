@@ -5,7 +5,7 @@
           document.body.style.overflow = 'hidden';
           document.querySelector('#openModalShaman').style.marginLeft = scrollbar;
         });
-        document.querySelector('[href="#close"]').addEventListener('click', function () {
+        document.querySelector('[href="#closeShaman"]').addEventListener('click', function () {
           document.body.style.overflow = 'visible';
           document.querySelector('#openModalShaman').style.marginLeft = '0px';
         });
