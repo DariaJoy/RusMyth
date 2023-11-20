@@ -1,0 +1,56 @@
+.main__title {
+    top                    : 1100px;
+    position               : absolute;
+    font-family            : 'TDIzbushka';
+    font-size              : 220px;
+    font-style             : normal;
+    font-weight            : 400;
+    line-height            : normal;
+    background             : linear-gradient(180deg, #FFD363 13.36%, rgba(136, 96, 35, 0.46) 58.94%, rgba(251, 177, 65, 0.00) 100%);
+    background-clip        : text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index                : 100;
+}
+
+.about__background {
+    background: linear-gradient(180deg, #000 5.89%, rgba(0, 0, 0, 0.00) 20.01%, rgba(0, 0, 0, 0.00) 86.67%, #000 100%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),
+        url('/public/img/backgroundAbout.jpg'),
+        lightgray 50% / cover no-repeat;
+    background-size: cover;
+    width          : 100%;
+    height         : 850px;
+}
+
+.about__container {
+    width          : 100%;
+    display        : flex;
+    flex-direction : row;
+    align-items    : center;
+    justify-content: center;
+}
+
+.about__control {
+    margin-top    : 150px;
+    width         : 60%;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    gap           : 50px;
+}
+
+.about__text {
+    color      : #FFF;
+    font-size  : 18px;
+    font-style : normal;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.about__img {
+    margin-top     : 40px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}

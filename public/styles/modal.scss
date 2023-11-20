@@ -1,0 +1,385 @@
+.modal,
+.modal-warrior,
+.modal-enchantress,
+.modal-hunter,
+.modal-shaman {
+    position          : fixed;
+    /* фиксированное положение */
+    top               : 0;
+    right             : 0;
+    bottom            : 0;
+    left              : 0;
+    background        : rgba(0, 0, 0, 0.7);
+    /* цвет фона */
+    z-index           : 1050;
+    opacity           : 0;
+    /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition   : opacity 400ms ease-in;
+    transition        : opacity 400ms ease-in;
+    /* анимация перехода */
+    pointer-events    : none;
+    /* элемент невидим для событий мыши */
+}
+
+/* при отображении модального окно */
+.modal:target,
+.modal-warrior:target,
+.modal-enchantress:target,
+.modal-hunter:target,
+.modal-shaman:target {
+    opacity       : 1;
+    pointer-events: auto;
+    overflow-y    : auto;
+}
+
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog,
+.modal-dialog-warrior,
+.modal-dialog-enchantress,
+.modal-dialog-hunter,
+.modal-dialog-shaman {
+    position: relative;
+    width   : auto;
+    margin  : 10px;
+}
+
+@media (min-width: 1200px) {
+
+    .modal-dialog {
+        max-width: 1000px;
+        margin   : 30px auto;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .modal-dialog-warrior,
+    .modal-dialog-enchantress,
+    .modal-dialog-hunter,
+    .modal-dialog-shaman {
+        max-width: 620px;
+        height   : auto;
+        margin   : 20px auto;
+    }
+}
+
+/* свойства для блока, содержащего контент модального окна */
+.modal-content {
+    position               : relative;
+    display                : -webkit-box;
+    display                : -webkit-flex;
+    display                : -ms-flexbox;
+    display                : flex;
+    -webkit-box-orient     : vertical;
+    -webkit-box-direction  : normal;
+    -webkit-flex-direction : column;
+    -ms-flex-direction     : column;
+    flex-direction         : column;
+    background             : url('/public/img/backgroundModal.jpg');
+    background-size        : cover;
+    -webkit-background-clip: padding-box;
+    background-clip        : padding-box;
+    border                 : 1px solid rgba(0, 0, 0, .2);
+    border-radius          : .3rem;
+    outline                : 0;
+}
+
+.modal-content-warrior {
+    position               : relative;
+    display                : -webkit-box;
+    display                : -webkit-flex;
+    display                : -ms-flexbox;
+    display                : flex;
+    -webkit-box-orient     : vertical;
+    -webkit-box-direction  : normal;
+    -webkit-flex-direction : column;
+    -ms-flex-direction     : column;
+    flex-direction         : column;
+    background             : url('/public/img/heroWarriorModalBackground.jpg');
+    background-size        : cover;
+    background-position-x  : 0;
+    background-repeat      : no-repeat;
+    -webkit-background-clip: padding-box;
+    background-clip        : padding-box;
+    border                 : 1px solid rgba(0, 0, 0, .2);
+    border-radius          : .3rem;
+    outline                : 0;
+}
+
+.modal-content-enchantress {
+    position               : relative;
+    display                : -webkit-box;
+    display                : -webkit-flex;
+    display                : -ms-flexbox;
+    display                : flex;
+    -webkit-box-orient     : vertical;
+    -webkit-box-direction  : normal;
+    -webkit-flex-direction : column;
+    -ms-flex-direction     : column;
+    flex-direction         : column;
+    background             : url('/public/img/heroEnchantressModalBackground.jpg');
+    background-size        : cover;
+    background-position-x  : 0;
+    background-repeat      : no-repeat;
+    -webkit-background-clip: padding-box;
+    background-clip        : padding-box;
+    border                 : 1px solid rgba(0, 0, 0, .2);
+    border-radius          : .3rem;
+    outline                : 0;
+}
+
+.modal-content-hunter {
+    position               : relative;
+    display                : -webkit-box;
+    display                : -webkit-flex;
+    display                : -ms-flexbox;
+    display                : flex;
+    -webkit-box-orient     : vertical;
+    -webkit-box-direction  : normal;
+    -webkit-flex-direction : column;
+    -ms-flex-direction     : column;
+    flex-direction         : column;
+    background             : url('/public/img/heroHunterModalBackground.jpg');
+    background-size        : cover;
+    background-position-x  : 0;
+    background-repeat      : no-repeat;
+    -webkit-background-clip: padding-box;
+    background-clip        : padding-box;
+    border                 : 1px solid rgba(0, 0, 0, .2);
+    border-radius          : .3rem;
+    outline                : 0;
+}
+
+.modal-content-shaman {
+    position               : relative;
+    display                : -webkit-box;
+    display                : -webkit-flex;
+    display                : -ms-flexbox;
+    display                : flex;
+    -webkit-box-orient     : vertical;
+    -webkit-box-direction  : normal;
+    -webkit-flex-direction : column;
+    -ms-flex-direction     : column;
+    flex-direction         : column;
+    background             : url('/public/img/heroShamanModalBackground.jpg');
+    background-size        : cover;
+    background-position-x  : 0;
+    background-repeat      : no-repeat;
+    -webkit-background-clip: padding-box;
+    background-clip        : padding-box;
+    border                 : 1px solid rgba(0, 0, 0, .2);
+    border-radius          : .3rem;
+    outline                : 0;
+}
+
+@media (min-width: 768px) {
+
+    .modal-content,
+    .modal-content-warrior,
+    .modal-content-enchantress,
+    .modal-content-hunter,
+    .modal-content-shaman {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        box-shadow        : 0 5px 15px rgba(0, 0, 0, .5);
+    }
+}
+
+
+/* свойства для заголовка модального окна */
+.modal-header,
+.modal-header-warrior,
+.modal-header-enchantress,
+.modal-header-hunter,
+.modal-header-shaman {
+    display                : -webkit-box;
+    display                : -webkit-flex;
+    display                : -ms-flexbox;
+    display                : flex;
+    -webkit-box-align      : center;
+    -webkit-align-items    : center;
+    -ms-flex-align         : center;
+    align-items            : center;
+    -webkit-box-pack       : justify;
+    -webkit-justify-content: center;
+    -ms-flex-pack          : justify;
+    justify-content        : center;
+    padding                : 15px;
+}
+
+.modal-header-warrior,
+.modal-header-enchantress,
+.modal-header-hunter,
+.modal-header-shaman {
+    justify-content: center;
+
+}
+
+
+.modal-title {
+    align-self   : center;
+    color        : rgba(255, 211, 99, 0.75);
+    text-align   : center;
+    text-shadow  : 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family  : Podkova;
+    font-size    : 27px;
+    font-style   : normal;
+    font-weight  : 700;
+    line-height  : normal;
+    margin-top   : 0;
+    margin-bottom: 0;
+    line-height  : 1.5;
+    margin-left  : 40px;
+    width        : 683px;
+}
+
+.modal__control {
+    position: relative;
+    color   : white;
+}
+
+.modal__control-title {
+    margin-top : 10px;
+    font-size  : 22px;
+    line-height: 150%;
+}
+
+.modal__control-text {
+    font-size  : 18px;
+    line-height: 150%;
+}
+
+/* свойства для кнопки "Закрыть" */
+.close {
+    float          : right;
+    font-family    : 'Podkova';
+    font-size      : 30px;
+    font-weight    : 300;
+    line-height    : 1;
+    color          : #FFD363;
+    text-decoration: none;
+    transition     : all 0.5s;
+    padding        : 20px 5px 2px 5px;
+    text-transform : uppercase;
+}
+
+
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus,
+.close:hover {
+    color          : white;
+    text-decoration: none;
+    cursor         : pointer;
+    opacity        : .85;
+}
+
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+    position        : relative;
+    -webkit-box-flex: 1;
+    -webkit-flex    : 1 1 auto;
+    -ms-flex        : 1 1 auto;
+    flex            : 1 1 auto;
+    padding         : 50px;
+    overflow        : auto;
+    flex-direction  : row;
+}
+
+.modal__mokap {
+    align-self: flex-end;
+    float     : right;
+    width     : 350px;
+}
+
+
+.modal-title-caracters {
+    position               : absolute;
+    top                    : -20px;
+    text-align             : center;
+    font-family            : TD Izbushka;
+    font-size              : 120px;
+    font-style             : normal;
+    font-weight            : 400;
+    line-height            : normal;
+    background             : linear-gradient(180deg, #FFD363 13.36%, rgba(136, 96, 35, 0.46) 58.94%, rgba(251, 177, 65, 0.00) 100%);
+    background-clip        : text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    mix-blend-mode         : lighten;
+    font-size              : 100px;
+}
+
+.modal-body-warrior-control,
+.modal-body-enchantress-control,
+.modal-body-hunter-control,
+.modal-body-shaman-control {
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-between;
+    align-items    : center;
+    gap            : 30px;
+    margin-top     : 135px;
+
+}
+
+.modal-body-warrior-control-card,
+.modal-body-enchantress-control-card,
+.modal-body-hunter-control-card,
+.modal-body-shaman-control-card {
+    position       : relative;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    gap            : 100px;
+}
+
+.heroWarriorCardBack,
+.heroEnchantressCardBack,
+.heroHunterCardBack,
+.heroShamanCardBack {
+    position  : absolute;
+    top       : -50px;
+    left      : 40px;
+    z-index   : 1;
+    width     : 230px;
+    transform : rotate(10.703deg);
+    cursor    : pointer;
+    transition: all 0.5s;
+}
+
+.heroWarriorCardBack:hover,
+.heroEnchantressCardBack:hover,
+.heroHunterCardBack:hover,
+.heroShamanCardBack:hover {
+    transform: rotate(0deg);
+    left     : 0;
+    top      : 0;
+    z-index  : 100;
+}
+
+.heroWarriorCardFace,
+.heroEnchantressCardFace,
+.heroHunterCardFace,
+.heroShamanCardFace {
+    z-index: 10;
+    width  : 230px;
+}
+
+.heroWarriorCardСharacteristic,
+.heroEnchantressCardСharacteristic,
+.heroHunterCardСharacteristic,
+.heroShamanCardСharacteristic {
+    z-index: 10;
+    width  : 230px;
+}
+
+.modal-body-warrior-control-title,
+.modal-body-enchantress-control-title,
+.modal-body-hunter-control-title,
+.modal-body-shaman-control-title {
+    color         : #FFD363;
+    text-align    : center;
+    font-size     : 30px;
+    font-weight   : 400;
+    text-transform: uppercase;
+}
