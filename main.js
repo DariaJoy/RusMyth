@@ -5,3 +5,7 @@ import './public/js/modal-warrior';
 import './public/js/modal-enchantress';
 import './public/js/modal-hunter';
 import './public/js/modal-shaman';
+import './public/js/modal-snake';
+import './public/js/modal-baba';
+import './public/js/modal-koshey';
+import './public/js/modal-kikimora';
