@@ -1,0 +1,18 @@
+.footer__control {
+    display       : flex;
+    flex-direction: column;
+}
+
+.footer__background {
+    background: linear-gradient(180deg, #000 -1.23%, rgba(0, 0, 0, 0.00) 36.09%, rgba(0, 0, 0, 0.00) 51.37%, #000 99.97%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%),
+        url('/public/img/backgroundFooter.jpg'),
+        lightgray -498.462px 1.474px / 134.767% 289.573% no-repeat;
+    background-repeat: no-repeat;
+    background-size  : cover;
+    height           : 148px;
+}
+
+.nav__logo-footer {
+    width: 280px;
+}
